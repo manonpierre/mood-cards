@@ -2,99 +2,140 @@
 <html lang="fr">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mood Cards</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
 
-    <header>
-        <h1>Mood Cards</h1>
+
+<header>
+
+    <h1>Mood Cards</h1>
+
+    <p>
+        Explorez vos inspirations et vos envies pour créer un intérieur qui vous ressemble.
+    </p>
+
+</header>
+
+
+
+<main>
+
+
+<section id="accueil">
+
+    <button onclick="startGame()">
+        Commencer l'exploration
+    </button>
+
+</section>
+
+
+
+
+<section id="jeu" style="display:none;">
+
+
+    <p id="compteur">
+        Carte 1 / 20
+    </p>
+
+
+
+    <div class="carte">
+
+        <img 
+            id="imageCarte"
+            src=""
+            alt="Inspiration décoration"
+        >
+
+    </div>
+
+
+
+
+    <div class="choix">
+
+
+        <button id="aime" onclick="choisir('aime')">
+            ✓ J'aime
+        </button>
+
+
+        <button id="mitige" onclick="choisir('mitige')">
+            ~ Mitigé
+        </button>
+
+
+        <button id="pas" onclick="choisir('pas')">
+            ✕ J'aime pas
+        </button>
+
+
+    </div>
+
+
+
+
+
+    <div class="question">
+
+
+        <h3>
+            Pourquoi ?
+        </h3>
+
+
         <p>
-            Explorez vos inspirations et vos envies pour créer un intérieur qui vous ressemble.
+            Échange oral avec votre architecte.
         </p>
-    </header>
 
 
-    <main>
-
-        <!-- Accueil -->
-        <section id="accueil">
-
-            <button onclick="startGame()">
-                Commencer l'exploration
-            </button>
-
-        </section>
+    </div>
 
 
 
-        <!-- Jeu -->
-        <section id="jeu" style="display:none;">
-
-            <p id="compteur">
-                Carte 1 / 1
-            </p>
 
 
-            <div class="carte">
+    <div class="navigation">
 
-                <img 
-                    id="imageCarte"
-                    src=""
-                    alt="Inspiration décoration"
-                >
 
-            </div>
+        <button onclick="cartePrecedente()">
+            ←
+        </button>
 
 
 
-            <div class="choix">
-
-                <button onclick="choisir('aime')">
-                    ✓ J'aime
-                </button>
+        <button onclick="carteSuivante()">
+            →
+        </button>
 
 
-                <button onclick="choisir('mitige')">
-                    ~ Mitigé
-                </button>
-
-
-                <button onclick="choisir('pas')">
-                    ✕ J'aime pas
-                </button>
-
-            </div>
+    </div>
 
 
 
-            <div class="question">
-
-                <h3>Pourquoi ?</h3>
-
-                <p>
-                    Réponse orale avec l'architecte.
-                </p>
-
-            </div>
+</section>
 
 
-        </section>
-
-
-    </main>
+</main>
 
 
 
-    <!-- Chargement des fichiers JavaScript -->
-    <script src="cartes.js"></script>
-    <script src="script.js"></script>
+<script src="cartes.js"></script>
+
+<script src="script.js"></script>
 
 
 </body>
