@@ -1,8 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+
 body {
 
     margin: 0;
 
-    padding: 0;
+    padding: 20px;
+
+    width: 100%;
+
+    min-height: 100vh;
 
     font-family: Arial, sans-serif;
 
@@ -12,25 +21,46 @@ body {
 
     text-align: center;
 
+    overflow-x: hidden;
+
 }
 
 
 
+/* TITRE ET DESCRIPTION */
 
 header {
 
-    padding: 20px;
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 0 auto 20px auto;
+
+    text-align: center;
 
 }
 
+
+header h1 {
+
+    text-align: center;
+
+}
 
 
 
 header p {
 
+    width: 100%;
+
     max-width: 400px;
 
-    margin: auto;
+    margin: 0 auto;
+
+    text-align: center;
+
+    line-height: 1.5;
 
 }
 
@@ -38,16 +68,24 @@ header p {
 
 
 
-main {
+/* PAGE ACCUEIL */
+
+#accueil {
+
+    width: 100%;
 
     display: flex;
 
     justify-content: center;
 
+    align-items: center;
+
 }
 
 
 
+
+/* ZONE JEU */
 
 #jeu {
 
@@ -59,51 +97,35 @@ main {
 
     align-items: center;
 
+    text-align: center;
+
 }
 
 
 
+
+
+/* COMPTEUR */
 
 #compteur {
 
-    margin-bottom: 20px;
+    width: 100%;
+
+    text-align: center;
+
+    margin: 15px auto 20px auto;
 
 }
 
 
 
 
+
+/* IMAGE */
 
 .carte {
 
-    display: flex;
-
-    justify-content: center;
-
-}
-
-
-
-
-.carte img {
-
-    width: 90vw;
-
-    max-width: 380px;
-
-    aspect-ratio: 9 / 16;
-
-    object-fit: cover;
-
-    border-radius: 15px;
-
-}
-
-
-
-
-
-.choix {
+    width: 100%;
 
     display: flex;
 
@@ -111,12 +133,47 @@ main {
 
     align-items: center;
 
-    gap: 12px;
+}
 
-    margin-top: 25px;
+
+
+.carte img {
+
+    display: block;
+
+    width: min(90vw, 380px);
+
+    aspect-ratio: 9 / 16;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    margin: 0 auto;
 
 }
 
+
+
+
+
+/* BOUTONS AVIS */
+
+.choix {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
 
 
 
@@ -126,11 +183,15 @@ main {
 
     height: 45px;
 
+    flex: 0 0 120px;
+
     display: flex;
 
     justify-content: center;
 
     align-items: center;
+
+    text-align: center;
 
     border-radius: 25px;
 
@@ -138,12 +199,13 @@ main {
 
     background: transparent;
 
+    color: #222;
+
     font-size: 14px;
 
-    cursor: pointer;
+    padding: 0;
 
 }
-
 
 
 
@@ -159,9 +221,15 @@ main {
 
 
 
+/* QUESTION */
+
 .question {
 
-    margin-top: 30px;
+    width: 100%;
+
+    max-width: 400px;
+
+    margin: 30px auto 0 auto;
 
     text-align: center;
 
@@ -169,9 +237,33 @@ main {
 
 
 
+.question h2 {
 
+    text-align: center;
+
+}
+
+
+
+.question p {
+
+    width: 100%;
+
+    text-align: center;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+
+/* FLECHES */
 
 .navigation {
+
+    width: 100%;
 
     display: flex;
 
@@ -179,12 +271,11 @@ main {
 
     align-items: center;
 
-    gap: 50px;
+    gap: 60px;
 
     margin-top: 30px;
 
 }
-
 
 
 
@@ -194,6 +285,12 @@ main {
 
     height: 50px;
 
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
     border-radius: 50%;
 
     border: 1px solid #222;
@@ -202,12 +299,67 @@ main {
 
     font-size: 25px;
 
-    display: flex;
+    padding: 0;
 
-    justify-content: center;
+}
 
-    align-items: center;
 
-    cursor: pointer;
+
+
+/* VERSION TELEPHONE */
+
+@media screen and (max-width: 600px) {
+
+
+    body {
+
+        padding: 15px;
+
+    }
+
+
+
+    header p {
+
+        padding: 0 10px;
+
+    }
+
+
+
+    .choix {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+
+    .choix button {
+
+        width: 110px;
+
+        flex-basis: 110px;
+
+    }
+
+
+
+    .question {
+
+        padding: 0 15px;
+
+    }
+
+
+
+    .navigation {
+
+        gap: 50px;
+
+    }
+
 
 }
