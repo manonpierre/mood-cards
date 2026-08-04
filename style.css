@@ -26,14 +26,13 @@ body {
 }
 
 
-
-/* TITRE ET DESCRIPTION */
+/* TITRE */
 
 header {
 
     width: 100%;
 
-    max-width: 500px;
+    max-width: 450px;
 
     margin: 0 auto 20px auto;
 
@@ -49,12 +48,9 @@ header h1 {
 }
 
 
-
 header p {
 
-    width: 100%;
-
-    max-width: 400px;
+    max-width: 380px;
 
     margin: 0 auto;
 
@@ -67,8 +63,7 @@ header p {
 
 
 
-
-/* PAGE ACCUEIL */
+/* ACCUEIL */
 
 #accueil {
 
@@ -85,7 +80,7 @@ header p {
 
 
 
-/* ZONE JEU */
+/* JEU */
 
 #jeu {
 
@@ -104,7 +99,6 @@ header p {
 
 
 
-
 /* COMPTEUR */
 
 #compteur {
@@ -113,7 +107,7 @@ header p {
 
     text-align: center;
 
-    margin: 15px auto 20px auto;
+    margin: 10px auto 20px auto;
 
 }
 
@@ -141,7 +135,7 @@ header p {
 
     display: block;
 
-    width: min(90vw, 380px);
+    width: min(80vw, 330px);
 
     aspect-ratio: 9 / 16;
 
@@ -149,7 +143,7 @@ header p {
 
     border-radius: 15px;
 
-    margin: 0 auto;
+    margin: auto;
 
 }
 
@@ -169,21 +163,24 @@ header p {
 
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
 }
 
 
 
+
 .choix button {
 
-    width: 120px;
 
-    height: 45px;
+    width: 28vw;
 
-    flex: 0 0 120px;
+    max-width: 95px;
+
+    height: 36px;
+
 
     display: flex;
 
@@ -191,9 +188,11 @@ header p {
 
     align-items: center;
 
+
     text-align: center;
 
-    border-radius: 25px;
+
+    border-radius: 20px;
 
     border: 1px solid #222;
 
@@ -201,19 +200,24 @@ header p {
 
     color: #222;
 
-    font-size: 14px;
+
+    font-size: 12px;
 
     padding: 0;
+
 
 }
 
 
 
+
 .choix button.selection {
+
 
     background: #222;
 
     color: #f5f3ef;
+
 
 }
 
@@ -227,9 +231,9 @@ header p {
 
     width: 100%;
 
-    max-width: 400px;
+    max-width: 350px;
 
-    margin: 30px auto 0 auto;
+    margin: 25px auto 0 auto;
 
     text-align: center;
 
@@ -241,17 +245,19 @@ header p {
 
     text-align: center;
 
+    margin-bottom: 10px;
+
 }
 
 
 
 .question p {
 
-    width: 100%;
-
     text-align: center;
 
     line-height: 1.5;
+
+    margin: auto;
 
 }
 
@@ -259,7 +265,7 @@ header p {
 
 
 
-/* FLECHES */
+/* NAVIGATION */
 
 .navigation {
 
@@ -271,9 +277,9 @@ header p {
 
     align-items: center;
 
-    gap: 60px;
+    gap: 50px;
 
-    margin-top: 30px;
+    margin-top: 25px;
 
 }
 
@@ -281,9 +287,10 @@ header p {
 
 .navigation button {
 
-    width: 50px;
+    width: 45px;
 
-    height: 50px;
+    height: 45px;
+
 
     display: flex;
 
@@ -291,13 +298,14 @@ header p {
 
     align-items: center;
 
+
     border-radius: 50%;
 
     border: 1px solid #222;
 
     background: transparent;
 
-    font-size: 25px;
+    font-size: 22px;
 
     padding: 0;
 
@@ -306,9 +314,19 @@ header p {
 
 
 
-/* VERSION TELEPHONE */
 
-@media screen and (max-width: 600px) {
+button {
+
+    cursor: pointer;
+
+}
+
+
+
+
+/* TELEPHONE */
+
+@media screen and (max-width:600px) {
 
 
     body {
@@ -318,10 +336,11 @@ header p {
     }
 
 
+    .carte img {
 
-    header p {
+        width: 75vw;
 
-        padding: 0 10px;
+        max-width: 300px;
 
     }
 
@@ -329,9 +348,7 @@ header p {
 
     .choix {
 
-        flex-wrap: wrap;
-
-        justify-content: center;
+        gap: 6px;
 
     }
 
@@ -339,9 +356,13 @@ header p {
 
     .choix button {
 
-        width: 110px;
+        width: 29vw;
 
-        flex-basis: 110px;
+        max-width: 90px;
+
+        height: 34px;
+
+        font-size: 11px;
 
     }
 
@@ -350,14 +371,6 @@ header p {
     .question {
 
         padding: 0 15px;
-
-    }
-
-
-
-    .navigation {
-
-        gap: 50px;
 
     }
 
