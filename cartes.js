@@ -10,7 +10,6 @@ const cartes = [
     { image: "images/carte-08.jpg" },
     { image: "images/carte-09.jpg" },
     { image: "images/carte-10.jpg" },
-
     { image: "images/carte-11.jpg" },
     { image: "images/carte-12.jpg" },
     { image: "images/carte-13.jpg" },
