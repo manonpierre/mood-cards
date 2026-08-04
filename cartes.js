@@ -1,3 +1,3 @@
 const cartes = [
-    { image: "carte-01.jpg" }
+    { image: "images/carte-01.jpg" }
 ];
