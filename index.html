@@ -1,69 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mood Cards</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-<header>
-    <h1>Mood Cards</h1>
-    <p>
-        Explorez vos inspirations et vos envies pour créer un intérieur qui vous ressemble.
-    </p>
-</header>
-
-
-<main>
-
-    <div id="accueil">
-        <button onclick="startGame()">
-            Commencer l'exploration
-        </button>
-    </div>
-
-
-    <div id="jeu" style="display:none;">
-
-        <p id="compteur">
-            Carte 1 / 20
-        </p>
-        <img id="imageCarte" src="images/carte-01.jpg" alt="Inspiration décoration">
-        <img id="imageCarte" src="" alt="Inspiration décoration">
-
-
-        <div class="choix">
-            <button onclick="choisir('aime')">
-                ✓ J'aime
-            </button>
-
-            <button onclick="choisir('mitige')">
-                ~ Mitigé
-            </button>
-
-            <button onclick="choisir('pas')">
-                ✕ J'aime pas
-            </button>
-        </div>
-
-
-        <h3>Pourquoi ?</h3>
-
+    <header>
+        <h1>Mood Cards</h1>
         <p>
-            Échange oral avec votre architecte
+            Trouvez ensemble les inspirations qui correspondent à votre intérieur.
         </p>
+    </header>
 
 
-    </div>
+    <main>
 
-</main>
+        <!-- PAGE D'ACCUEIL -->
+        <section id="accueil">
+
+            <button onclick="startGame()">
+                Commencer l'exploration
+            </button>
+
+        </section>
 
 
-<script src="cartes.js"></script>
-<script src="script.js"></script>
+
+        <!-- JEU -->
+        <section id="jeu" style="display:none;">
+
+            <p id="compteur">
+                Carte 1 / 1
+            </p>
+
+
+            <img 
+                id="imageCarte" 
+                src="images/carte-01.jpg" 
+                alt="Inspiration décoration"
+            >
+
+
+            <div class="choix">
+
+                <button onclick="choisir('aime')">
+                    ✓ J'aime
+                </button>
+
+
+                <button onclick="choisir('mitige')">
+                    ~ Mitigé
+                </button>
+
+
+                <button onclick="choisir('pas')">
+                    ✕ J'aime pas
+                </button>
+
+            </div>
+
+
+            <h3>Pourquoi ?</h3>
+
+            <p>
+                Réponse orale avec l'architecte
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="cartes.js"></script>
+    <script src="script.js"></script>
+
 
 </body>
+
 </html>
